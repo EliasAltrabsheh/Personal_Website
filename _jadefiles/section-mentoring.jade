@@ -1,0 +1,21 @@
+mixin faces
+  li.face(style="background-image: url(http://fillmurray.com/80/80);")
+    .bubble
+      p I am finaaly building a website
+      cite - Elias Altrabsheh
+
+section.mentoring
+  .flex.flex--center
+    .col-1
+      ul.faces
+        +face
+        +face
+        li.face.has-bubble-open(style="background-image:url(http://fillmurray.com/80/80);")
+          .bubble
+            p I am finaaly building a website
+            cite - Elias Altrabsheh
+        +face
+        
+    .col-1
+      p.home-lead.outdented ... Montoring people like you
+      a(href="https://github.com/EliasCode2015").home-cta Please click here for github

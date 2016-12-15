@@ -1,0 +1,32 @@
+mixin nav-content()
+  ul
+    // Sets list of header option pages
+    li: a(href = "#about") About
+    li: a(href = "#CV") CV
+    li: a(href = "#Github")  Github
+    li: a(href = "#articles") Articles
+    li: a(href = "#notes") Notes
+    li: a(href = "#contact") Contact 
+  
+
+  .mobile-nav.is-open
+  +nav-content()
+  
+ header
+  .header-position
+    h1.logo Elias Altrabsheh!
+    
+    nav.site-nav
+      ul
+        li: a(href = "#about") About
+        li: a(href = "#CV") CV
+        li: a(href = "#Github")  Github
+        li: a(href = "#articles") Articles
+        li: a(href = "#notes") Notes
+        li: a(href = "#contact") Contact
+      
+    a(href="mailto:elias.altrabsheh@kcl.ac.uk"
+       ).email-link +email me
+
+    .mobile-nav-toggle    
+        

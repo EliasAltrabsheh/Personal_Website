@@ -1,0 +1,51 @@
+section.mentoring
+  background:
+    image: url(/assets/images/code.jpg)
+    position: center
+    size: cover
+  color: white
+
+  .home-cta
+    color: #2cb4db
+
+  .home-lead
+
+  .faces
+    list-style: none
+    background: pink
+    margin: -50px 0
+    height: calc(100% +100px)
+    padding: 0
+
+
+
+  .face
+    height: 80px
+    width: 80px
+    background:
+      size: cover
+      position: center
+    border-radius: 50%
+    margin-bottom: 35px
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
+    position: relative
+
+  .bubble
+    opacity: 0
+    display: none
+    position: absolute
+    left: 100%
+    margin-left: 5px
+    width: 300px
+    background: rgba(0,0,0,0.8)
+    padding: 20px
+    border-radius: 20px 20px 20px 5px
+    border: 3px solid white
+    pointer-events: none
+    transition: all 0.25s ease-in-out
+    transform: scale(0)
+    transform-origin: bottom left
+
+  .face:hover .bubble
+    opacity: 1
+    transform: scale(1)
