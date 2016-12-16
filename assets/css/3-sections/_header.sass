@@ -1,22 +1,22 @@
 .home-wrap
-   header
+  header
     width: 135px
     background: white
     padding: 30px 0
 
     .header-position
       position: fixed
-      top: 40px
+      top: 30px
       left: 0
-      bottom: 300px
+      bottom: 30px
       width: 135px
       display: flex
       flex-direction: column
       justify-content: space-between
 
-
     .logo
       +hide-text
+      max-width: 135px
       background:
         image: url(/assets/images/logo-ea.svg)
         repeat: no-repeat
@@ -28,107 +28,109 @@
       margin: 0
 
     .site-nav
-       ul
-         list-style: none
-         margin: 20px 0
-         padding: 0 20px 0 0
-         text-align: right
+      ul
+        list-style: none
+        margin: 20px 0
+        padding: 0 20px 0 0
+        text-align: right
 
-         li
-           margin-bottom: 10px
+      li
+        margin-bottom: 10px
 
-           &:last-child
-             margin-bottom: 0
+        &:last-child
+          margin-bottom: 0
 
     .email-link
       display: block
       text-align: right
       padding-right: 20px
 
+  .mobile-nav-toggle
+    display: none
+    width: 50px
+    height: 50px
+    //background: pink
+    margin-right: 20px
+    align-items: center
+    cursor: pointer
 
-    .mobile-nav-toggle
-      display: none
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: block
+      height: 2px
       width: 50px
-      height: 50px
-      background: pink
-      margin-right: 20px
-      align-items: center
-      cursor: pointer
+      background: black
+      position: absolute
 
-      span,
-      span:before,
-      span:after
-        content: ""
-        display: block
-        height: 2px
-        width: 100%
-        background: #333
-        position: relative
+      transition: all 0.2s ease-in-out
 
-        transition: all 0.3s ease-in-out
+    span:before
+      top: 11px
 
-      span:before
-        top: 15px
+    span:after
+      bottom: -20px
 
-      span:after
-        bottom: -17px
+    &.is-open span
+      background: transparent
 
-      &.is-open span
-        background: transparent
+    &.is-open span:before,
+    &.is-open span:after
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 0
 
-      &.is-open span:before,
-      &.is-open span:after
-        transform-origin: center
-        transform: rotate(45deg)
-        top: 0
-      &.is-open span:before
-        transform: rotate(-45deg)
+    &.is-open span:after
+      transform: rotate(-45deg)
 
-//mobile Nav
- .mobile-nav
-   display: none
-   position: absolute
-   width=100%
-   background: white
-   padding: 30px 0 20px
-   transform: translateY(100%)
+  .mobile-nav
+    display: none
+    position: absolute
+    width: 100%
+    background: white
+    padding: 30px 0 20px
+    transform: translateY(-100%)
+    transition: all 0.2s ease-in-out
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
 
-   ul
-     list-style: none
-     margin: 0
-     padding: 0
+    li
+      text-align: center
+      margin-bottom: 10px
 
-   li
-     text-align: centre
-     margin:
+
+
+
+
 
 @media (max-width: 775px)
   .home-wrap
     header
       width: auto
-      padding: 30px 0
+      padding: 20px 0
 
       .header-position
         width: auto
-        position:relative
+        position: relative
         top: auto
         bottom: auto
         left: auto
         flex-direction: row
         align-items: center
 
-
       .site-nav,
       .email-link
-       display: none
+        display: none
 
       .logo
-        height: 60px
+        height: 45px
 
       .mobile-nav-toggle
+        display: flex
 
-        display:flex
-
-  .mobile-nav-is-open
-    display: block
-    transform: translate(0%)
+    .mobile-nav.is-open
+      display: block
+      transform: translateY(0%)

@@ -1,6 +1,6 @@
 .home-wrap
   display: flex
-  min-height: 10vh
+  min-height: 100vh
 
   @media (max-width: 775px)
     display: block
@@ -11,9 +11,10 @@
   section
     padding: 50px 0
 
+
   .flex
     display: flex
-    flex-direction: rows
+    flex-direction: row
 
   .flex--centre
     justify-content: center
@@ -23,7 +24,6 @@
 
   .order-first
     order: -1
-
 
 //columns dimentions control
 .col-1
@@ -38,11 +38,10 @@
 
 .col-50
   width: 50%
-  //background: yellow
+  background: yellow
 
 .push-right
   margin-left: 330px
-
 @media (max-width:640px)
   .home-sections .flex
     display: block
@@ -51,7 +50,7 @@
     max-width: 100%
 
   .col-50
-    width:auto
+    width: auto
 
   .push-right
     margin-left: 10px
